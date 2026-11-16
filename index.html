@@ -60,7 +60,7 @@ a{color:var(--accent)}.hidden{display:none!important}
  <div class="card"><label>Antrenman adı</label><input id="workoutName" placeholder="Örn. Upper A"><label>Rutinden başlat</label><select id="routineSelect" onchange="loadRoutine()"><option value="">Rutin seç...</option></select></div>
  <div id="workoutExercises"></div>
  <div class="card"><label>Yeni hareket ekle</label><input id="newExercise" placeholder="Örn. Bench Press"><button class="secondary full" onclick="addExercise()">＋ Hareket ekle</button></div>
- <div class="card"><div class="row"><div><h3>Dinlenme sayacı</h3><div class="small">Varsayılan 90 saniye</div></div><span class="pill" id="timerState">HAZIR</span></div><div class="timer" id="timerDisplay">01:30</div><div class="row"><button class="secondary" onclick="setTimer(60)">60 sn</button><button class="secondary" onclick="setTimer(90)">90 sn</button><button class="secondary" onclick="setTimer(120)">120 sn</button><button onclick="startTimer()">Başlat</button></div></div>
+ <div class="card"><div class="row"><div><h3>Dinlenme sayacı</h3><div class="small">Varsayılan 90 saniye</div></div><span class="pill" id="timerState">HAZIR</span></div><div class="timer" id="timerDisplay">01:30</div><div class="row"><button class="secondary" onclick="setTimer(30)">30 sn</button><button class="secondary" onclick="setTimer(60)">60 sn</button><button class="secondary" onclick="setTimer(90)">90 sn</button><button class="secondary" onclick="setTimer(120)">120 sn</button><button onclick="startTimer()">Başlat</button></div></div>
 </section>
 <section id="library" class="screen">
  <div class="row"><h2>Hareket kütüphanesi</h2><span class="pill" id="exerciseCount">0 HAREKET</span></div>

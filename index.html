@@ -54,10 +54,10 @@ a{color:var(--accent)}.hidden{display:none!important}.workout-add-panel{margin-b
 <main>
 
 <section id="workout" class="screen active">
- <div class="row"><h2>Antrenman</h2><button class="ghost" onclick="finishWorkout()">Bitir ✓</button></div>
- <div class="card"><label>Antrenman adı</label><input id="workoutName" placeholder="Örn. Upper A"><label>Rutinden başlat</label><select id="routineSelect" onchange="loadRoutine()"><option value="">Rutin seç...</option></select></div>
+ <div class="row"><h2>Antrenman</h2><div class="row"><button class="secondary" id="workoutAddButton" style="width:42px;height:42px;padding:0;font-size:25px;line-height:1" aria-label="Rutin veya hareket ekle" onclick="toggleWorkoutAddMenu()">＋</button><button class="ghost" onclick="finishWorkout()">Bitir ✓</button></div></div>
+ <div class="card hidden workout-add-panel" id="workoutAddMenu"><div class="row"><b>Ne eklemek istersin?</b><button class="ghost" onclick="closeWorkoutAddMenu()">✕</button></div><div class="row"><button class="secondary full" onclick="openWorkoutPicker('routine')">＋ Rutin ekle</button><button class="secondary full" onclick="openWorkoutPicker('exercise')">＋ Hareket ekle</button></div></div>
+ <div class="card hidden workout-add-panel" id="workoutPicker"><div class="row"><b id="workoutPickerTitle">Seçim yap</b><button class="ghost" onclick="closeWorkoutPicker()">✕</button></div><div id="workoutPickerList" class="workout-pick-list"></div><button class="full hidden" id="workoutPickerAdd" onclick="addSelectedWorkoutExercises()">Seçilen hareketleri ekle</button></div>
  <div id="workoutExercises"></div>
- <div class="card"><label>Yeni hareket ekle</label><input id="newExercise" placeholder="Örn. Bench Press"><button class="secondary full" onclick="addExercise()">＋ Hareket ekle</button></div>
  <div class="card"><div class="row"><div><h3>Dinlenme sayacı</h3><div class="small">Varsayılan 90 saniye</div></div><span class="pill" id="timerState">HAZIR</span></div><div class="timer" id="timerDisplay">01:30</div><div class="row"><button class="secondary" onclick="setTimer(30)">30 sn</button><button class="secondary" onclick="setTimer(60)">60 sn</button><button class="secondary" onclick="setTimer(90)">90 sn</button><button class="secondary" onclick="setTimer(120)">120 sn</button><button onclick="startTimer()">Başlat</button></div></div>
 </section>
 <section id="library" class="screen">

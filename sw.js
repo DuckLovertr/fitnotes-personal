@@ -1,4 +1,4 @@
-const CACHE='fitnotes-plus-v1-4-39';
+const CACHE='fitnotes-plus-v1-4-40';
 const FILES=['./','./index.html','./manifest.webmanifest','./icon.svg'];
 
 self.addEventListener('install',event=>{
